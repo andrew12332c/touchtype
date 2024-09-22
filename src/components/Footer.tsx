@@ -31,7 +31,7 @@ export default function Footer() {
     const [showList, setShowList] = useState<boolean>(false);
     useEffect(() => {
         const URL =
-            // "https://api.github.com/andrew12332c/typetest/contributors";
+                "https://api.github.com/andrew12332c/typetest/contributors";
         fetch(URL)
             .then((res) => res.json())
             .then((data: Contributor[]) =>
@@ -55,7 +55,6 @@ export default function Footer() {
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.github.com/andrew12332c/typetest"> 
-                    {/* update when getting api worki g */}
                     <span>&lt;/&gt;</span> github
                 </a>
                 <span>
