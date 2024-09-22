@@ -31,12 +31,12 @@ export default function Footer() {
     const [showList, setShowList] = useState<boolean>(false);
     useEffect(() => {
         const URL =
-            // "https://api.github.com/repos/typing-test/contributors";
+            // "https://api.github.com/andrew12332c/typetest/contributors";
         fetch(URL)
             .then((res) => res.json())
             .then((data: Contributor[]) =>
                 data.filter(
-                    (contributor) => contributor.login !== "salmannotkhan"
+                    (contributor) => contributor.login !== "Andrew Zhang"
                 )
             )
             .then((filtered) => setContributors(filtered));
@@ -54,7 +54,7 @@ export default function Footer() {
                 <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://www.github.com//typing-test"> 
+                    href="https://www.github.com/andrew12332c/typetest"> 
                     {/* update when getting api worki g */}
                     <span>&lt;/&gt;</span> github
                 </a>
@@ -63,7 +63,7 @@ export default function Footer() {
                     <a
                         target="_blank"
                         rel="noreferrer"
-                        href="https://www.github.com/">
+                        href="https://www.github.com/andrew12332c">
                         @salmannotkhan
                     </a>
                 </span>
