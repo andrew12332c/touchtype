@@ -63,7 +63,7 @@ export default function Footer() {
                         target="_blank"
                         rel="noreferrer"
                         href="https://www.github.com/andrew12332c">
-                        @salmannotkhan
+                        @andrew
                     </a>
                 </span>
                 {showList ? (
