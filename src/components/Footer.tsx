@@ -62,7 +62,7 @@ export default function Footer() {
                     <a
                         target="_blank"
                         rel="noreferrer"
-                        href="https://www.github.com/andrew12332c">
+                        href="https://www.linkedin.com/in/andrew-zhanger/">
                         @andrew
                     </a>
                 </span>
