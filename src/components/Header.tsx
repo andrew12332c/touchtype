@@ -68,9 +68,16 @@ export default function Header() {
 
     useEffect(() => {
         const theme = localStorage.getItem("theme") || "default";
-        const type = localStorage.getItem("type") || "intro";  
+        const type = localStorage.getItem("type") || "words";  
         //change this to change the default theme
+        //localStorage.setItem("type", "intro");
         const time = parseInt(localStorage.getItem("time") || "60", 10);
+            
+    // If type is not already set, default to intro
+    if (!localStorage.getItem("type")) {
+        localStorage.setItem("type", "intro");
+    }
+
         import(`wordlists/${type}.json`).then((words) =>
             dispatch(setWordList(words.default))
         );
