@@ -53,6 +53,7 @@ export const options: Options = {
         "got",
         "javascript",
         "python",
+        "intro",
     ],
 };
 
