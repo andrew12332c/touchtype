@@ -75,6 +75,9 @@ export const recordTest = (key: string, ctrlKey: boolean) => {
         case "Backspace":
             handleBackspace(ctrlKey);
             break;
+        case "\'": // Escape the single quote
+            dispatch(setChar(typedWord + key));
+            break;
         default:
             dispatch(setChar(typedWord + key));
             break;
