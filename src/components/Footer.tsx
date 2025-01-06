@@ -66,7 +66,6 @@ export default function Footer() {
                         @andrew
                     </a>
                 </span>
-                </span>
                 <a
                     target="_blank"
                     rel="noreferrer"
