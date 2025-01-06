@@ -66,6 +66,14 @@ export default function Footer() {
                         @andrew
                     </a>
                 </span>
+                </span>
+                <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.overleaf.com/read/rvnjkjybrghq#997122"
+                    className="resume-link">
+                    📄 View My Resume
+                </a>
                 {showList ? (
                     <div className="contributor-list" onBlur={console.log}>
                         <h2>contributors</h2>
