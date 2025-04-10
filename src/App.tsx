@@ -4,6 +4,7 @@ import Header from "components/Header";
 import Test from "components/Test";
 import Result from "components/Result";
 import Footer from "components/Footer";
+import SideProfile from "components/SideProfile"; // Import the new component
 import { State } from "store/reducer";
 import { setTimerId } from "store/actions";
 import { recordTest } from "helpers/recordTest";
