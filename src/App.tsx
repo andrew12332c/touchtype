@@ -27,7 +27,8 @@ export default function App() {
             } else if (
                 e.key.length === 1 ||
                 e.key === "Backspace" ||
-                e.key === "Tab"
+                e.key === "Tab" ||
+                e.key === "Escape"
             ) {
                 recordTest(e.key, e.ctrlKey);
                 e.preventDefault();
@@ -37,6 +38,7 @@ export default function App() {
             document.onkeydown = null;
         };
     }, [dispatch]);
+    
 
     useEffect(() => {
         let idx = typedWord.length - 1;
