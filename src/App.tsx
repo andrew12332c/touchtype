@@ -4,11 +4,12 @@ import Header from "components/Header";
 import Test from "components/Test";
 import Result from "components/Result";
 import Footer from "components/Footer";
-import SideProfile from "components/SideProfile"; // Import the new component
+//import SideProfile from "components/SideProfile";
 import { State } from "store/reducer";
 import { setTimerId } from "store/actions";
 import { recordTest } from "helpers/recordTest";
 import "stylesheets/themes.scss";
+//import "stylesheets/AppLayout.scss"; // <- add this
 import CommandPallet from "components/CommandPallet";
 
 export default function App() {
@@ -38,7 +39,7 @@ export default function App() {
             document.onkeydown = null;
         };
     }, [dispatch]);
-    
+
     useEffect(() => {
         let idx = typedWord.length - 1;
         const currWordEl = activeWordRef?.current!;
@@ -62,15 +63,24 @@ export default function App() {
             dispatch(setTimerId(null));
         }
     }, [dispatch, timer, timerId]);
+
+    // return (
+    //     // <div className="app-layout">
+    //         {/* <SideProfile /> */}
+    //         <main className="main-content">
+    //             <Header />
+    //             {showPallet && <CommandPallet setShowPallet={setShowPallet} />}
+    //             {timer ? <Test /> : <Result />}
+    //             <Footer />
+    //         </main>
+    //     </div>
+    // );
     return (
-        <div className="app-layout">
-            <SideProfile />
-            <div className="main-content">
-                <Header />
-                {showPallet && <CommandPallet setShowPallet={setShowPallet} />}
-                {timer ? <Test /> : <Result />}
-                <Footer />
-            </div>
-        </div>
+        <>
+            <Header />
+            {showPallet && <CommandPallet setShowPallet={setShowPallet} />}
+            {timer ? <Test /> : <Result />}
+            <Footer />
+        </>
     );
 }
