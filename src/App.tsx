@@ -39,7 +39,6 @@ export default function App() {
         };
     }, [dispatch]);
     
-
     useEffect(() => {
         let idx = typedWord.length - 1;
         const currWordEl = activeWordRef?.current!;
@@ -63,13 +62,15 @@ export default function App() {
             dispatch(setTimerId(null));
         }
     }, [dispatch, timer, timerId]);
-
     return (
-        <>
-            <Header />
-            {showPallet && <CommandPallet setShowPallet={setShowPallet} />}
-            {timer ? <Test /> : <Result />}
-            <Footer />
-        </>
+        <div className="app-layout">
+            <SideProfile />
+            <div className="main-content">
+                <Header />
+                {showPallet && <CommandPallet setShowPallet={setShowPallet} />}
+                {timer ? <Test /> : <Result />}
+                <Footer />
+            </div>
+        </div>
     );
 }
