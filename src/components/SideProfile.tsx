@@ -18,7 +18,7 @@ export default function SideProfile() {
     return (
         <aside className="side-profile">
             <div className="profile-header">
-                <h2>User</h2>
+                <h2>Profile</h2>
             </div>
             <nav className="profile-nav">
                 {buttons.map((label, index) => (
